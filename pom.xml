@@ -1,0 +1,37 @@
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+  <modelVersion>4.0.0</modelVersion>
+  <parent>
+    <groupId>com.zeychen</groupId>
+    <artifactId>superparent</artifactId>
+    <version>0.0.1-SNAPSHOT</version>
+  </parent>
+  
+  <artifactId>integration</artifactId>
+  <packaging>pom</packaging>
+  
+  <modules>
+  	<module>../superparent</module>
+  	<module>../identityVerification</module>
+  </modules>
+  
+  <reporting>
+  	<plugins>
+  		<plugin>
+  			<groupId>org.apache.maven.plugins</groupId><!-- javadoc文档 -->
+  			<artifactId>maven-javadoc-plugin</artifactId>
+  		</plugin>
+  		<plugin>
+  			<groupId>org.apache.maven.plugins</groupId><!-- 网页查看源代码 -->
+  			<artifactId>maven-jxr-plugin</artifactId>
+  		</plugin>
+  		<plugin>
+  			<groupId>org.apache.maven.plugins</groupId><!-- 检查代码风格 -->
+  			<artifactId>maven-checkstyle-plugin</artifactId>
+  		</plugin>
+  		<plugin>
+  			<groupId>org.apache.maven.plugins</groupId><!-- 源代码分析 -->
+  			<artifactId>maven-pmd-plugin</artifactId>
+  		</plugin>
+  	</plugins>
+  </reporting>
+</project>
